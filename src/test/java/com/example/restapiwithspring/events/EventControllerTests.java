@@ -1,8 +1,6 @@
 package com.example.restapiwithspring.events;
 
-import com.example.restapiwithspring.common.TestDescription;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
