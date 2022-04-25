@@ -109,7 +109,7 @@ public class EventControllerTests {
                 .beginEnrollmentDateTime(LocalDateTime.of(2022, 4, 24, 20, 47))
                 .closeEnrollmentDateTime(LocalDateTime.of(2022, 4, 25, 20, 47))
                 .beginEventDateTime(LocalDateTime.of(2022, 4, 25, 20, 47))
-                .endEventDateTime(LocalDateTime.of(2022, 4, 26, 20,47))
+                .endEventDateTime(LocalDateTime.of(2022, 4, 23, 20,47))
                 .basePrice(10000)
                 .maxPrice(200)
                 .limitOfEnrollment(100)
@@ -118,10 +118,12 @@ public class EventControllerTests {
 
         mockMvc.perform(post("/api/events/")
                 .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaTypes.HAL_JSON)
                 .content(objectMapper.writeValueAsString(event)))
                 .andDo(print())
                 .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$[0].objectName").exists())
+                .andExpect(jsonPath("$[0].defaultMessage").exists())
+                .andExpect(jsonPath("$[0].code").exists())
         ;
     }
 }
