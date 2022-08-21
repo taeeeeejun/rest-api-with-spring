@@ -80,7 +80,7 @@ public class EventControllerTests {
                         ),
                         requestFields(
                                 fieldWithPath("name").description("Name of new event"),
-                                fieldWithPath("description").description("Description of new event"),
+                                fieldWithPath("description").description("description of new event"),
                                 fieldWithPath("beginEnrollmentDateTime").description("date time of begin of new event"),
                                 fieldWithPath("closeEnrollmentDateTime").description("date time of close of new event"),
                                 fieldWithPath("beginEventDateTime").description("date time of begin of new event"),
@@ -88,16 +88,16 @@ public class EventControllerTests {
                                 fieldWithPath("location").description("location of new event"),
                                 fieldWithPath("basePrice").description("base price of new event"),
                                 fieldWithPath("maxPrice").description("max price of new event"),
-                                fieldWithPath("limitOfEnrollment").description("limit of enrollment of new event")
+                                fieldWithPath("limitOfEnrollment").description("limit of enrollment")
                         ),
                         responseHeaders(
-                                headerWithName(HttpHeaders.LOCATION).description("location header"),
+                                headerWithName(HttpHeaders.LOCATION).description("location"),
                                 headerWithName(HttpHeaders.CONTENT_TYPE).description("content type header")
                         ),
                         responseFields(
-                                fieldWithPath("id").description("Id of new event"),
+                                fieldWithPath("id").description("identifier of new event"),
                                 fieldWithPath("name").description("Name of new event"),
-                                fieldWithPath("description").description("Description of new event"),
+                                fieldWithPath("description").description("description of new event"),
                                 fieldWithPath("beginEnrollmentDateTime").description("date time of begin of new event"),
                                 fieldWithPath("closeEnrollmentDateTime").description("date time of close of new event"),
                                 fieldWithPath("beginEventDateTime").description("date time of begin of new event"),
@@ -105,13 +105,13 @@ public class EventControllerTests {
                                 fieldWithPath("location").description("location of new event"),
                                 fieldWithPath("basePrice").description("base price of new event"),
                                 fieldWithPath("maxPrice").description("max price of new event"),
-                                fieldWithPath("limitOfEnrollment").description("limit of enrollment of new event"),
-                                fieldWithPath("free").description("free of new event"),
-                                fieldWithPath("offline").description("offline of new event"),
-                                fieldWithPath("eventStatus").description("event status of new event"),
+                                fieldWithPath("limitOfEnrollment").description("limit of enrollment"),
+                                fieldWithPath("free").description("it tells is this event is free or not"),
+                                fieldWithPath("offline").description("it tells is this event is offline or not"),
+                                fieldWithPath("eventStatus").description("event status"),
                                 fieldWithPath("_links.self.href").description("link to self"),
-                                fieldWithPath("_links.query-events.href").description("link to query event list"),
-                                fieldWithPath("_links.update-event.href").description("link to update existing event")
+                                fieldWithPath("_links.query-events.href").description("link to query events"),
+                                fieldWithPath("_links.update-event.href").description("link to update event")
                         )
                 ))
         ;
